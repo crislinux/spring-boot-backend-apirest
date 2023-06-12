@@ -43,7 +43,7 @@ public class ExceptionConfig {
 	}
 	
 	private ResponseEntity<ErrorResponse> buildResponseEntity(HttpStatus httpStatus, Exception exc, List<String> errors) {
-	    ErrorResponse error = new ErrorResponse("EXCEPTION-" + exc.getMessage());
+	    ErrorResponse error = new ErrorResponse(exc.getMessage());
 	    if (errors != null && !errors.isEmpty()) {
 	        String errorMessage = String.join(System.lineSeparator(), errors);
 	        error.setMessage(" " + errorMessage);

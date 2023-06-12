@@ -5,8 +5,6 @@ import java.util.UUID;
 
 import javax.transaction.Transactional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +14,6 @@ import com.bci.springbootbackendapirest.models.entity.User;
 
 @Service
 public class UserService implements IUserService {
-	
-	private Logger logger = LoggerFactory.getLogger(UserService.class);
 	
 	@Autowired
 	private IUserDao userDao;
@@ -40,7 +36,6 @@ public class UserService implements IUserService {
 		return userDao.save(user);
 	}
 
-	
 	@Override
 	public User findAdminByEmailAndState(String email, boolean isActive) {
 		return userDao.findAdminByEmailAndState(email, isActive);

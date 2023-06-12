@@ -10,15 +10,14 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Phone  {
-	
-	/* Properties */
+public class Phone {
 
+	/* Properties */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
-	
-    @NotNull
+
+	@NotNull
 	@Column(unique = true)
 	private String number;
 
@@ -26,9 +25,8 @@ public class Phone  {
 
 	private String contrycode;
 
-
+	
 	/* Getters and Setters */
-
 	public UUID getId() {
 		return id;
 	}
@@ -60,8 +58,5 @@ public class Phone  {
 	public void setContrycode(String contrycode) {
 		this.contrycode = contrycode;
 	}
-
-
-	
 
 }

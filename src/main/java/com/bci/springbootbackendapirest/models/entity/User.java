@@ -60,12 +60,11 @@ public class User implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date lastLogin;
 	
-	/* Getters and Setters */
-	
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "user_id")
     private List<Phone> phones;
-
+	
+	/* Getters and Setters */
 	public UUID getId() {
 		return id;
 	}

@@ -78,7 +78,7 @@ public class UserControllerTest {
     @Test
     public void testCreate_ValidUser() {
         User user = new User();
-        user.setEmail("testexample.com");
+        user.setEmail("test@example.com");
 
         BindingResult bindingResult = mock(BindingResult.class);
         when(bindingResult.hasErrors()).thenReturn(false);
@@ -96,7 +96,7 @@ public class UserControllerTest {
     @Test
     public void testCreate_InvalidUser() {
         User user = new User();
-        user.setEmail("testexample.com");
+        user.setEmail("test@example.com");
 
         BindingResult bindingResult = mock(BindingResult.class);
         when(bindingResult.hasErrors()).thenReturn(true);
@@ -108,7 +108,7 @@ public class UserControllerTest {
     @Test
     public void testCreate_DuplicateEmail() {
         User user = new User();
-        user.setEmail("testexample.com");
+        user.setEmail("test@example.com");
 
         BindingResult bindingResult = mock(BindingResult.class);
         when(userService.existsAdminByEmail(user.getEmail())).thenReturn(true);
