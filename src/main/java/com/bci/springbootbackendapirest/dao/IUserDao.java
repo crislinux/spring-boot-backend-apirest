@@ -10,9 +10,6 @@ import com.bci.springbootbackendapirest.models.entity.User;
 
 public interface IUserDao extends CrudRepository<User, Long> {
 	
-	@Query("SELECT u FROM User u WHERE u.email = ?1 and u.isActive = ?2")
-	User findAdminByEmailAndState(String email, Boolean isActive);
-
 	boolean existsAdminByEmail(String email);
 
 	Optional<User> findById(UUID id);

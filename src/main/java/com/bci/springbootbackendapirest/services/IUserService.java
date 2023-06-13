@@ -10,9 +10,7 @@ public interface IUserService {
 	public List<User> findAll();
 	
 	public User findById(UUID id);
-	
-	public User findAdminByEmailAndState(String email, boolean isActive);
-	
+		
 	public boolean existsAdminByEmail(String email);
 	
 	public User save(User user);

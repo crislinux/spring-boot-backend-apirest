@@ -37,11 +37,6 @@ public class UserService implements IUserService {
 	}
 
 	@Override
-	public User findAdminByEmailAndState(String email, boolean isActive) {
-		return userDao.findAdminByEmailAndState(email, isActive);
-	}
-
-	@Override
 	public boolean existsAdminByEmail(String email) {
 		return userDao.existsAdminByEmail(email);
 	}
